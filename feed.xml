@@ -3,10 +3,31 @@
     <title>How-to-build-prompt-for-LLM-RP</title>
     <link href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/feed.xml" rel="self" />
     <link href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP" />
-    <updated>1970-01-01T08:00:00+08:00</updated>
+    <updated>2026-03-22T22:01:13+08:00</updated>
     <author>
         <name>noS</name>
     </author>
     <id>https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP</id>
 
+    <entry>
+        <title>前言</title>
+        <author>
+            <name>noS</name>
+        </author>
+        <link href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/qian-yan.html"/>
+        <id>https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/qian-yan.html</id>
+
+        <updated>2026-03-22T22:01:13+08:00</updated>
+            <summary type="html">
+                <![CDATA[
+                    關於這個網站 作為個人部落格用，將會分享自身以Gemini製作RP的經驗與技巧，用愛發電，將會緩慢更新。
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h1 id="關於這個網站">關於這個網站</h1>
+<p>作為個人部落格用，將會分享自身以Gemini製作RP的經驗與技巧，用愛發電，將會緩慢更新。</p>
+            ]]>
+        </content>
+    </entry>
 </feed>
