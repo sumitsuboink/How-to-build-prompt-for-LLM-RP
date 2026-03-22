@@ -3,51 +3,10 @@
     <title>How-to-build-prompt-for-LLM-RP</title>
     <link href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/feed.xml" rel="self" />
     <link href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP" />
-    <updated>2026-03-22T21:49:02+08:00</updated>
+    <updated>1970-01-01T08:00:00+08:00</updated>
     <author>
         <name>noS</name>
     </author>
     <id>https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP</id>
 
-    <entry>
-        <title>文章一</title>
-        <author>
-            <name>noS</name>
-        </author>
-        <link href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/test3.html"/>
-        <id>https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/test3.html</id>
-
-        <updated>2026-03-22T20:29:31+08:00</updated>
-            <summary type="html">
-                <![CDATA[
-                    文章一
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h1 id="文章一">文章一</h1>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>目錄頁</title>
-        <author>
-            <name>noS</name>
-        </author>
-        <link href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/test-1.html"/>
-        <id>https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/test-1.html</id>
-
-        <updated>2026-03-22T20:21:54+08:00</updated>
-            <summary type="html">
-                <![CDATA[
-                    這邊會放總綱目錄
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>這邊會放總綱目錄</p>
-            ]]>
-        </content>
-    </entry>
 </feed>
