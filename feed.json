@@ -10,18 +10,30 @@
     },
     "items": [
         {
+            "id": "https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/mu-lu.html",
+            "url": "https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/mu-lu.html",
+            "title": "01.目錄",
+            "author": {
+                "name": "noS"
+            },
+            "tags": [
+            ],
+            "date_published": "2026-03-22T23:03:14+08:00",
+            "date_modified": "2026-03-22T23:03:31+08:00"
+        },
+        {
             "id": "https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/qian-yan.html",
             "url": "https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/qian-yan.html",
-            "title": "前言",
-            "summary": "關於這個網站 作為個人部落格用，將會分享自身以Gemini製作RP的經驗與技巧，用愛發電，將會緩慢更新。",
-            "content_html": "<h1 id=\"關於這個網站\">關於這個網站</h1>\n<p>作為個人部落格用，將會分享自身以Gemini製作RP的經驗與技巧，用愛發電，將會緩慢更新。</p>",
+            "title": "00.關於網站",
+            "summary": "關於網站 個人部落格。 用愛發電，緩慢更新。 無償分享。 內容純手工，不使用AI生成廢文。 以學術討論的立場寫作。 版權宣告： GNU GPLv3 主要內容 分享以Gemini製作並進行RP的經驗與技巧。 深入淺出、提供實例。 寫作風格 日期格式 260322 ＝ 2026/03/22。 以寫在前面，減少 認知誤區 與 浪費時間 。 參考資料於文末標注。",
+            "content_html": "<h1 id=\"關於網站\">關於網站</h1>\n<ul>\n<li>個人部落格。</li>\n<li>用愛發電，緩慢更新。</li>\n<li>無償分享。</li>\n<li><strong>內容純手工</strong>，不使用AI生成廢文。</li>\n<li>以學術討論的立場寫作。</li>\n<li>版權宣告： <a href=\"https://www.gnu.org/licenses/gpl-3.0.zh-tw.html\">GNU GPLv3</a></li>\n</ul>\n<h1 id=\"主要內容\">主要內容</h1>\n<p>分享以Gemini製作並進行RP的經驗與技巧。</p><ul>\n<li>深入淺出、提供實例。</li>\n</ul>\n<h1 id=\"寫作風格\">寫作風格</h1>\n<ul>\n<li>日期格式 260322 ＝ 2026/03/22。</li>\n<li>以<strong>寫在前面</strong>，減少 認知誤區 與 浪費時間 。</li>\n<li>參考資料於文末標注。</li>\n</ul>\n",
             "author": {
                 "name": "noS"
             },
             "tags": [
             ],
             "date_published": "2026-03-22T22:01:13+08:00",
-            "date_modified": "2026-03-22T22:01:13+08:00"
+            "date_modified": "2026-03-22T23:16:06+08:00"
         }
     ]
 }
