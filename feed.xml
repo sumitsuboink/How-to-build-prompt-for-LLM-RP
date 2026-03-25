@@ -3,7 +3,7 @@
     <title>How-to-build-prompt-for-LLM-RP</title>
     <link href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/feed.xml" rel="self" />
     <link href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP" />
-    <updated>2026-03-25T21:53:53+08:00</updated>
+    <updated>2026-03-25T22:15:43+08:00</updated>
     <author>
         <name>noS</name>
     </author>
@@ -151,7 +151,7 @@
 <li><a href="https://www.youtube.com/watch?v=j0jjpetbzLE">推薦影片：AI 的底層邏輯與機率預測</a> <br>雖然是以影片生成為例，但底層規律與 LLM 互通</li>
 </ul>
 <hr>
-<h2 id="適合rp用途之-llm-260323現時點，ai整理">適合RP用途之 LLM (260323現時點，AI整理)</h2>
+<h2 id="適合rp用途之-llm">適合RP用途之 LLM</h2>
 <table>
 <thead>
 <tr>
@@ -212,7 +212,7 @@
 <td align="left"><a href="https://qwen.ai/">連結</a></td>
 </tr>
 </tbody></table>
-<hr>
+<p>(260323現時點，AI整理)</p><hr>
 <h2 id="如何用-llm-進行rp">如何用 LLM 進行RP</h2>
 <h3 id="一句型rp">一句型RP</h3>
 <p>使用 LLM 進行RP非常簡單，在交談中指示要進行RP，並且與 LLM 討論角色與情境，即可開始RP。</p><p>譬如：</p><pre><code>我想進行RP，LLM請扮演咬著土司趕上學的冒失女高中生，我(玩家)扮演男高中生。上學途中，兩人在街角撞在一起。
@@ -357,12 +357,26 @@
         <updated>2026-03-22T23:03:14+08:00</updated>
             <summary type="html">
                 <![CDATA[
-                    前言
+                    前言 Google Gemini 介紹 製作 Prompt 之前，觀念釐清
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p><a href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/10qian-yan.html">前言</a></p>
+                <p><a href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/10qian-yan.html">前言</a> </p><ul>
+<li>簡介RP、LLM、prompt</li>
+<li>如何將Prompt結構化</li>
+<li>簡述為什麼選擇Gemini進行教學</li>
+<li>延伸閱讀：<ul>
+<li><a href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/promptgong-chengprompt-engineering.html">Prompt工程（Prompt Engineering）</a></li>
+<li>AI幻覺與注意力</li>
+</ul>
+</li>
+</ul>
+<p>Google Gemini 介紹</p><ul>
+<li>事前準備</li>
+<li>Google Gemini Gem 基本使用方式</li>
+</ul>
+<p>製作 Prompt 之前，觀念釐清</p>
             ]]>
         </content>
     </entry>
