@@ -3,12 +3,134 @@
     <title>How-to-build-prompt-for-LLM-RP</title>
     <link href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/feed.xml" rel="self" />
     <link href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP" />
-    <updated>2026-03-25T22:15:43+08:00</updated>
+    <updated>2077-04-01T00:00:00+08:00</updated>
     <author>
         <name>noS</name>
     </author>
     <id>https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP</id>
 
+    <entry>
+        <title>文章目錄</title>
+        <author>
+            <name>noS</name>
+        </author>
+        <link href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/mu-lu.html"/>
+        <id>https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/mu-lu.html</id>
+
+        <updated>2077-04-01T00:00:00+08:00</updated>
+            <summary type="html">
+                <![CDATA[
+                    前言 Google Gemini 介紹 markdown語法與標點符號簡介 開始前的認知釐清
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><a href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/10qian-yan.html">前言</a> </p><ul>
+<li>簡介RP、LLM、prompt</li>
+<li>如何將Prompt結構化</li>
+<li>簡述為什麼選擇Gemini進行教學</li>
+<li>延伸閱讀：<ul>
+<li><a href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/promptgong-chengprompt-engineering.html">Prompt工程（Prompt Engineering）</a></li>
+<li><a href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/aide-huan-jueshi-yi-yu-cuo-luan.html">AI 的幻覺、失憶與錯亂</a></li>
+</ul>
+</li>
+</ul>
+<p>Google Gemini 介紹</p><ul>
+<li>事前準備</li>
+<li>Google Gemini Gem 基本使用方式</li>
+</ul>
+<p>markdown語法與標點符號簡介</p><p>開始前的認知釐清</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>AI的幻覺、失憶與錯亂</title>
+        <author>
+            <name>noS</name>
+        </author>
+        <link href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/aide-huan-jueshi-yi-yu-cuo-luan.html"/>
+        <id>https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/aide-huan-jueshi-yi-yu-cuo-luan.html</id>
+
+        <updated>2026-03-27T00:16:25+08:00</updated>
+            <summary type="html">
+                <![CDATA[
+                    寫在前面 綱要： LLM 因先天架構而導致其特性——注意力不足。 解釋幻覺、失憶與錯亂，三種問題的原因。 AI 的幻覺、失憶與錯亂 日常使用 LLM 或進行長時間的RP，可能會遇到&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 id="寫在前面">寫在前面</h2>
+<h3 id="綱要：">綱要：</h3>
+<ul>
+<li>LLM 因先天架構而導致其特性——注意力不足。</li>
+<li>解釋幻覺、失憶與錯亂，三種問題的原因。</li>
+</ul>
+<h2 id="ai-的幻覺、失憶與錯亂">AI 的幻覺、失憶與錯亂</h2>
+<p>日常使用 LLM 或進行長時間的RP，可能會遇到 LLM 突然 「記錯事情」 、 「編造從未發生的劇情」 或 「角色開始前後矛盾」。</p><p>這三種現象乍看不同，實則根源相同—— LLM 並不是真的在 「思考」 或 「記憶」 ，它只是在預測 「下一個字最可能是什麼」。</p><h3 id="核心原因-llm-的運作方式">核心原因—— LLM 的運作方式</h3>
+<p>LLM 進行每次的回應時，都是重新讀取 prompt 跟 「從頭至今所有的對話紀錄」 ，然後開始「接龍」，預測每個產出的文字。</p><p>LLM 沒有獨立的記憶體，也無法查核產出的內容是否正確——它只知道 「哪種回應最符合訓練資料的模式」。</p><p>這些特性源於 LLM 核心架構（Transformer）的先天侷限：</p><ul>
+<li><strong>注意力機制（Attention Mechanism）</strong>:<br>LLM 並非「記住」內容，而是每次生成 token 時重新計算哪些上下文最相關。<br>對話過長，遠距離的內容注意力權重會衰減。</li>
+<li><strong>上下文窗口（Context Window）</strong>：<br>LLM 一次能處理的 Token 總數有其物理上限。一旦對話內容超出此範圍，舊的資訊會被捨棄，無法進入運算。</li>
+<li><strong>自迴歸生成（Autoregressive Generation）</strong>：<br>LLM 是根據前面已出現的文字，依據機率預測下一個字。此過程純屬機率分佈，缺乏內建的事實校驗機制。</li>
+</ul>
+<h3 id="白話解釋">白話解釋</h3>
+<p>幻覺、失憶與錯亂的原因是 「LLM 的注意力不足，且放錯重點」。</p><p>試想 LLM 是一個博學但容易分心的學生，它正在參加一場「接龍寫作考試」。</p><p>它的任務是根據前面寫過的內容，猜出下一個字是什麼。</p><p>而它用來「看題目」和「回憶知識」的能力，就是 「注意力機制」（Attention Mechanism）。</p><p>所謂的 「注意力不足」，並不是說它過動，而是指它在處理海量資訊時，無法完美地權衡哪些資訊是重要的、哪些是真實的、哪些是舊的。</p><h2 id="三種現象的成因">三種現象的成因</h2>
+<h3 id="幻覺（hallucination）">幻覺（Hallucination）</h3>
+<p>LLM 在生成時，沒有機制去確認 「這是真的嗎」。 優先選擇（憑空填補） 「聽起來最合理或通順的答案」。</p><p>LLM 的注意力被<strong>語言的慣性</strong>帶偏，忽略了<strong>事實的錨點</strong>。</p><p>在 RP 中，這會表現為：</p><ul>
+<li>憑空捏造從未發生過的劇情或設定。</li>
+<li>聲稱某件事 「之前有說過」，但根本沒有。</li>
+<li>產生不存在的角色、地名、道具。</li>
+</ul>
+<h3 id="失憶（context-loss）">失憶（Context Loss）</h3>
+<p>當RP對話因時間積累過長之後，LLM 會開始 「忘記」 前面說過的話或發生過的事。</p><p>也許對話超過上下文窗口，沒有輸入；或早期內容的注意力權重太低，導致那些資訊實際上沒有影響到當次生成。</p><p>在 RP 中，這會表現為：</p><ul>
+<li>忘記角色的名字、外貌、性格設定。</li>
+<li>重複詢問已經解釋過的事情。</li>
+<li>把很早之前發生過的重要劇情當作不存在。</li>
+</ul>
+<h3 id="錯亂（character-drift--context-confusion）">錯亂（Character Drift / Context Confusion）</h3>
+<p>角色開始變得前後不一致、丟失特性，甚至混亂。</p><p>尤其容易發生在多角色RP中。</p><p>LLM 的注意力機制擅長處理 「局部關聯」（這一個字跟那一個字很搭），但不擅長維持 「全局邏輯」。</p><p>多重設定互相競爭注意力；對話越長，系統提示（角色設定）相對比重越小，生成結果越容易被對話本身的模式帶偏。</p><p>在 RP 中，這會表現為：</p><ul>
+<li>角色的口吻、個性悄悄改變。</li>
+<li>同一角色對同一件事態度矛盾。</li>
+<li>在多角色場景中混淆不同人物的角色設定。</li>
+<li>長篇 RP 後，角色越來越 「像AI」 而非原本設定。</li>
+</ul>
+<h2 id="總結">總結</h2>
+<p>這三個問題，皆同源於 「注意力資源有限」 與 「權衡能力的極限」：</p><ul>
+<li>幻覺是因為注意力過度權重了 「像真話」（語言概率），忽略了「是真話」（事實核查）。</li>
+<li>失憶是因為注意力過度權重了 「新資訊」（近期上下文），忽略了「舊資訊」（遠期上下文）。</li>
+<li>錯亂是因為注意力過度權重了 「局部通順」（句子內部），忽略了「全局一致」（邏輯整體）。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">現象</th>
+<th align="left">根源（注意力偏向）</th>
+<th align="left">忽略點</th>
+<th align="left">RP 中的具體表現</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>幻覺<br> (Hallucination)</strong></td>
+<td align="left"><strong>語言機率</strong><br>（傾向生成「像真話」的通順文字）</td>
+<td align="left"><strong>事實核查</strong><br>（忽略內容是否真實）</td>
+<td align="left">捏造未發生的劇情、不存在的地名、虛構之前沒說過的設定。</td>
+</tr>
+<tr>
+<td align="left"><strong>失憶<br> (Context Loss)</strong></td>
+<td align="left"><strong>新資訊</strong><br>（過度權重近期上下文）</td>
+<td align="left"><strong>舊資訊</strong><br>（忽略遠期的上下文或設定）</td>
+<td align="left">忘記角色名字/性格、重複詢問已知的資訊、遺忘重要早期劇情。</td>
+</tr>
+<tr>
+<td align="left"><strong>錯亂<br> (Confusion)</strong></td>
+<td align="left"><strong>局部通順</strong><br>（只追求句子內部的關聯）</td>
+<td align="left"><strong>全局一致</strong><br>（忽略整體的邏輯與角色特性）</td>
+<td align="left">角色個性走鐘、多角色設定混淆、行為前後矛盾或 AI 感變重。</td>
+</tr>
+</tbody></table>
+<p>是無論日常使用 LLM 或進行RP都繞不開的困擾。</p><p>假使剛開始新對話，就發覺 LLM 已經產生幻覺或錯亂，語焉不詳、答非所問。</p><p>可以直接重新開始新對話，多試幾次。</p><p>若是在RP途中產生這些問題。之後會寫RP時與 LLM 交談的技巧，將會介紹解決的方法。</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Prompt工程（Prompt Engineering）</title>
         <author>
@@ -132,23 +254,34 @@
 <li>選擇Google Gemini的原因。</li>
 </ul>
 <h2 id="什麼是-rp">什麼是 RP</h2>
-<p>RP（Role-playing，角色扮演），泛指扮演特定角色，依照人設進行演出與他人互動。</p><p>詞語本身具多重歧義，但本系列文將聚焦於以<strong>LLM進行角色扮演遊戲</strong>的範疇。</p><p>尤其是對單人（或少數）角色的互動模擬。（原因於後說明）</p><p><a href="https://zh.wikipedia.org/wiki/%E8%A7%92%E8%89%B2%E6%89%AE%E6%BC%94">WIKI對角色扮演的介紹</a></p><h2 id="什麼是-llm">什麼是 LLM</h2>
+<p>RP（Role-playing，角色扮演），泛指扮演特定角色，依照人設進行演出與他人互動。</p><p>詞語本身具多重歧義，但本系列文將聚焦於以<strong>LLM進行角色扮演遊戲</strong>的範疇。</p><p>尤其是對單人（或少數）角色的互動模擬。（原因於後說明）</p><p>參考資料：<a href="https://zh.wikipedia.org/wiki/%E8%A7%92%E8%89%B2%E6%89%AE%E6%BC%94">WIKI對角色扮演的介紹</a></p><h2 id="什麼是-llm">什麼是 LLM</h2>
 <p>LLM（Large Language Model，大型語言模型）是一種基於人工神經網路與 Transformer 架構的深度學習 AI。它透過極為大量的文字數據訓練而成，能夠理解人類的自然語言（平常講話的方式）並進行對話。</p><p>其本質上是一個強大的 「<strong>文本生成器</strong>」 或 「<strong>機率預測機器</strong>」 。它就像一個讀過全世界所有書籍、且極度擅長玩「文字接龍」的超級大腦：</p><ol>
-<li><p>拆解與定位（Tokens &amp; Vectors）<br>
-在訓練時，LLM 會將素材拆解成極細微的小區塊（Tokens），並轉換成數位世界的座標（向量）。這讓它能理解詞彙之間的<strong>語意關聯</strong>（例如「太陽」與「溫暖」在座標上會很接近）。</p></li>
-<li><p>建立規律（Transformer 架構）<br>
+<li><p><strong>拆解與定位（Tokens &amp; Vectors）</strong><br>
+在訓練時，LLM 會將素材拆解成極細微的小區塊（Token），並轉換成數位世界的座標（向量）。這讓它能理解詞彙之間的<strong>語意關聯</strong>（例如「太陽」與「溫暖」在座標上會很接近）。</p></li>
+<li><p><strong>建立規律（Transformer 架構）</strong><br>
 透過繁複的演算法，它會找出詞彙之間隱藏的統計規律。譬如：當出現 「床前明月」 時，它知道下一個字出現 「光」 的機率最高。</p></li>
-<li><p>預測與生成<br>
+<li><p><strong>預測與生成</strong><br>
 當你提問時，LLM 會拆解你的問題，並在龐大的「規律地圖」中定位，藉此預測下一個字、下一個片段最可能出現的內容，進而拼湊出完整的回答。</p></li>
-<li><p>核心是「機率」<br>
-<strong>LLM 的輸出本質上是機率的選擇。</strong><br> 
+<li><p><strong>核心是「機率」</strong><br>
+<strong>LLM 的輸出，本質上是機率的選擇。</strong><br> 
 即使是同一個問題，它每次生成的路徑可能略有不同，因此不一定會得到完全相同的答案。<br>
 這也是為什麼 <strong>Prompt（提示詞）</strong> 的引導如此重要 —— 好的 Prompt 能將機率導向更準確的答案。</p></li>
 </ol>
-<p>延伸閱讀與參考資料：</p><ul>
+<pre><code>Token 是 LLM 處理文字的最小單位。（也是收費單位）
+
+LLM 在讀取或生成文字之前，會先把所有文字切成一塊一塊的 token。大致上：
+
+    英文：
+        一個常見單字 ≈ 1 個 token。
+        長單字或複雜單字會被切開。（如 friendship 可能拆成 friend 和 ship）
+    中文：通常 1–2 個字 ≈ 1 個 token。（與模型版本有關，越新穎的編碼技術越高，轉換比也更高）
+
+    其他：空格、換行、標點符號也列入token計算。
+</code></pre>
+<p>參考資料：</p><ul>
 <li><a href="https://aws.amazon.com/tw/what-is/large-language-model/">AWS對LLM的介紹</a></li>
 <li><a href="https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E5%9E%8B%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B">WIKI對LLM的介紹</a></li>
-<li><a href="https://www.youtube.com/watch?v=j0jjpetbzLE">推薦影片：AI 的底層邏輯與機率預測</a> <br>雖然是以影片生成為例，但底層規律與 LLM 互通</li>
+<li><a href="https://www.youtube.com/watch?v=j0jjpetbzLE">推薦影片：AI 的底層邏輯與機率預測</a> <br>（雖然是以影片生成為例，但底層規律與 LLM 互通）</li>
 </ul>
 <hr>
 <h2 id="適合rp用途之-llm">適合RP用途之 LLM</h2>
@@ -237,15 +370,15 @@
 </ul>
 <p>豐富的人設與設定，能讓 LLM 在生成內容時，有更具體的參考。</p><p>而敘事的風格與人稱的指派，能讓敘事時，增加角色心聲的敘述。</p><p>雖然追加的設定，產生約束，進而降低了 LLM 自由的發揮可能性，</p><p>但追加的內容，反倒為兩人創造出新的火花，讓後續的發展更有戲。</p><p>可以說追加設定，能進行加味與調味，</p><p>讓產出內容更精緻化，更貼合玩家心中的期望。</p><h3 id="什麼是-prompt">什麼是 prompt</h3>
 <p>Prompt（提示詞）本質上和 「一般在對話框下指令」 是同一件事，</p><p>但 Prompt 背後代表著一套更進階、更準確的溝通思維。</p><p>目前的 LLM 基於機率生成回答。 同樣的問題，不同的問法會觸發模型內部的不同權重路徑。</p><p>提問的方式，會直接的影響產出的品質，因此如何編寫 Prompt，是與 LLM 溝通的一門藝術。</p><p>譬如：</p><ul>
-<li>直接在對話框下指令：什麼是小籠包？</li>
-<li>使用prompt思維下指令：請用繁體中文寫一篇300字的小籠包介紹，內容包含由來、發展與特色，語氣親切端莊，目標是一般遊客。</li>
+<li><strong>直接在對話框下指令</strong>：什麼是小籠包？</li>
+<li><strong>使用prompt思維下指令</strong>：請用繁體中文寫一篇300字的小籠包介紹，內容包含由來、發展與特色，語氣親切端莊，目標是一般遊客。</li>
 </ul>
 <p>就如同前面 「兩人上學相撞」 的例子一般，在進行詳細的定義後。</p><p>能產出更明確、品質更高、貼合需求的結果。</p><p>好的prompt能幫助使用者：</p><ol>
-<li>精確的獲得想要的答案：<br>精確的 Prompt 能透過設定邊界（例如要求「僅根據提供的文件回答」），<br>大幅降低 AI 幻覺，降低胡說八道的機率，提高資訊的準確性。</li>
-<li>控制輸出格式：<br>直接指定回答的角色定位；內容結構、長度、表現風格，實現高度客製化的輸出。</li>
-<li>解鎖的AI深層能力：<br>許多 AI 的進階能力（推理、<strong>角色扮演</strong>、多步驟分析）需要透過設計好的 Prompt 才能發揮。</li>
-<li>節省來回溝通的時間：<br>減少往復修改與補充說明的次數。</li>
-<li>提升自動化效率：<br>在開發層面，Prompt 是串接 AI API 與實際應用的橋樑。<br>標準化的prompt，能協助AI穩定執行高重複性工作。</li>
+<li><strong>精確的獲得想要的答案</strong>：<br>精確的 Prompt 能透過設定邊界（例如要求「僅根據提供的文件回答」），<br>大幅降低 AI 幻覺，降低胡說八道的機率，提高資訊的準確性。</li>
+<li><strong>控制輸出格式</strong>：<br>直接指定回答的角色定位；內容結構、長度、表現風格，實現高度客製化的輸出。</li>
+<li><strong>解鎖的AI深層能力</strong>：<br>許多 AI 的進階能力（推理、<strong>角色扮演</strong>、多步驟分析）需要透過設計好的 Prompt 才能發揮。</li>
+<li><strong>節省來回溝通的時間</strong>：<br>減少往復修改與補充說明的次數。</li>
+<li><strong>提升自動化效率</strong>：<br>在開發層面，Prompt 是串接 AI API 與實際應用的橋樑。<br>標準化的prompt，能協助AI穩定執行高重複性工作。</li>
 </ol>
 <p>要提高prompt的品質，可以參考下列幾個方向：</p><table>
 <thead>
@@ -293,7 +426,8 @@
 2.小明(玩家角色):
     身份：男高中生。
 
-3.故事梗概：小娜咬著土司趕上學，頭髮亂糟糟、穿著急忙套上的水手服（鈕扣扣錯），與男主角在街角撞在一起。
+3.故事梗概：
+    小娜咬著土司趕上學，頭髮亂糟糟、穿著急忙套上的水手服（鈕扣扣錯），與男主角在街角撞在一起。
 
 4.背景設定：
     小娜看錯時間，真正上學的時間還沒到。
@@ -302,14 +436,14 @@
 5.敘事風格：請以第三人稱，小說文體進行敘事。
 </code></pre>
 <p>結構化後，依據角色、事件、背景、敘事，將整個 prompt 進行分類整理。</p><p>提昇了可識性，也方便後續進行增改。</p><p>將 Prompt 結構化的好處：</p><ul>
-<li>對於下指令者：<ul>
+<li><strong>對於下指令者</strong>：<ul>
 <li>消除重複、冗餘的敘述。</li>
 <li>方便維護、版本控制。</li>
 <li>模組化與可移植性。<br>結構化的 prompt 可以拆分成可替換的元件，方便在不同 prompt 甚至 LLM 間組合使用。</li>
 <li>便於測試評估。<br>結構化後，各元件可以獨立替換測試，方便診斷影響輸出品質的關鍵變數。</li>
 </ul>
 </li>
-<li>對於LLM：<ul>
+<li><strong>對於 LLM</strong>：<ul>
 <li>能激發 LLM 進行「邏輯鏈思考」（Chain of Thought），處理複雜推理任務。</li>
 <li>降低 prompt 的錯誤判讀。</li>
 <li>明確 prompt 判讀時的權重。<br>讓 LLM 知道哪些設定比較重要、哪些是補充，避免關鍵指示被忽略。</li>
@@ -319,64 +453,30 @@
 <p>這段 prompt 目前已稍具雛型，可以在 LLM 開新對話之後。</p><p>使用剪貼的方式，重複執行一樣的內容。</p><h2 id="使用-google-gemini">使用 Google Gemini</h2>
 <p>但還有更方便的方式，便是透過 Google Gemini Gem 進行編寫、測試與實行。</p><p>Google Gemini Gem 是支援以 prompt 自定義 LLM 的設置檔，可以設置多組。</p><p>Gem 的 prompt 可以參照 Google文件，因此可以直接編輯、即時同步，甚至分享給他人。</p><p>可以多組設置、方便編輯，是本系列文選用 Google Gemini 的最大原因。</p><p>除此之外 Google Gemini 還有其他長處。</p><h3 id="選擇gemini之原因">選擇Gemini之原因</h3>
 <ul>
-<li>Gem Prompt可參照Google文件：<ul>
+<li><strong>Gem Prompt可參照Google文件</strong>：<ul>
 <li>隨時編輯、即時同步</li>
 <li>插件封包<br>將元件獨立放在其他文檔中，在Gem中直接替換。(後續說明）</li>
 </ul>
 </li>
-<li>超長上下文（Long Context）：<ul>
+<li><strong>超長上下文（Long Context）</strong>：<ul>
 <li>目前 LLM RP 的通病：RM過程產生的大量內容，會導致失憶或錯亂。(後續說明）</li>
 <li>Gemini、ChatGPT 支持之文本長度遠優於其他模型。（2026.03.25 現時點）</li>
 </ul>
 </li>
-<li>原生多模態 (Native Multimodality) ：<ul>
+<li><strong>原生多模態 (Native Multimodality)</strong>：<ul>
 <li>使用同一個精神網絡建構跨媒介模型，能以低消耗進行複雜的任務處理。</li>
 <li>這為提供了RP更大的可能性。（RP運用於後續舉例）</li>
 </ul>
 </li>
-<li>Google 生態系整合(Google Ecosystem Integration)：<ul>
+<li><strong>Google 生態系整合(Google Ecosystem Integration)</strong>：<ul>
 <li>與 Google Workspace 聯動。</li>
 <li>能直接調用 Google 雲端硬碟、 Gmail、 GoogleMap 或 Youtuber 資源。</li>
 </ul>
 </li>
 </ul>
-<h3 id="補充說明">補充說明</h3>
+<p>延伸閱讀：<a href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/aide-huan-jueshi-yi-yu-cuo-luan.html">AI 的幻覺、失憶與錯亂</a></p><h3 id="補充說明">補充說明</h3>
 <p>雖然上面 LLM 的比較表格有提到，Gemini 須較多的 prompt 才能 「進入狀況」。</p><p>但這其實無妨，只要在 prompt 多下幾句敘述，協助RP內容生成時進行潤色即可。</p><p>接下來系列文的教學中，將會一一介紹潤色方法。</p><p>另，製作給 LLM 進行RP用的 prompt 其基本思路是共通的，</p><p>邏輯通達後，日後想轉換系統並不困難。</p><hr>
 <p>接下來下一篇文章，將進行 Google Gemini Gem 的介紹。</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>目錄</title>
-        <author>
-            <name>noS</name>
-        </author>
-        <link href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/mu-lu.html"/>
-        <id>https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/mu-lu.html</id>
-
-        <updated>2026-03-22T23:03:14+08:00</updated>
-            <summary type="html">
-                <![CDATA[
-                    前言 Google Gemini 介紹 製作 Prompt 之前，觀念釐清
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><a href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/10qian-yan.html">前言</a> </p><ul>
-<li>簡介RP、LLM、prompt</li>
-<li>如何將Prompt結構化</li>
-<li>簡述為什麼選擇Gemini進行教學</li>
-<li>延伸閱讀：<ul>
-<li><a href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/promptgong-chengprompt-engineering.html">Prompt工程（Prompt Engineering）</a></li>
-<li>AI幻覺與注意力</li>
-</ul>
-</li>
-</ul>
-<p>Google Gemini 介紹</p><ul>
-<li>事前準備</li>
-<li>Google Gemini Gem 基本使用方式</li>
-</ul>
-<p>製作 Prompt 之前，觀念釐清</p>
             ]]>
         </content>
     </entry>
