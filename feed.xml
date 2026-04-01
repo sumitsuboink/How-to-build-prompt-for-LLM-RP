@@ -20,12 +20,13 @@
         <updated>2077-04-01T00:00:00+08:00</updated>
             <summary type="html">
                 <![CDATA[
-                    前言 Google Gemini Gem 介紹 markdown語法與標點符號簡介 開始前的認知釐清
+                    前言 簡介RP、LLM、prompt 如何將Prompt結構化 簡述為什麼選擇Gemini進行教學 延伸閱讀： Prompt工程（Prompt Engineering） AI 的幻覺、失憶與錯亂 Google&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p><a href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/10qian-yan.html">前言</a> </p><ul>
+                <ol>
+<li><a href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/10qian-yan.html">前言</a> <ul>
 <li>簡介RP、LLM、prompt</li>
 <li>如何將Prompt結構化</li>
 <li>簡述為什麼選擇Gemini進行教學</li>
@@ -35,11 +36,25 @@
 </ul>
 </li>
 </ul>
-<p><a href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/google-gemini-gem-jie-shao.html">Google Gemini Gem 介紹</a></p><ul>
-<li>事前準備</li>
-<li>Google Gemini Gem 基本使用方式</li>
+</li>
+<li><a href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/google-gemini-gem-jie-shao.html">Google Gemini Gem 介紹</a><ul>
+<li>Gem 使用前之準備</li>
+<li>簡介 Gem 如何新增、編輯</li>
 </ul>
-<p>markdown語法與標點符號簡介</p><p>開始前的認知釐清</p>
+</li>
+<li>開始前的認知釐清</li>
+<li>初階 RP 製作：咖啡廳情緣<ul>
+<li>延伸閱讀：<ul>
+<li>markdown語法與標點符號簡介</li>
+<li>RP 背景設定與角色設計簡述</li>
+<li>RP 時交談的技術（初階）</li>
+<li>評估與測試</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
             ]]>
         </content>
     </entry>
@@ -669,7 +684,7 @@ LLM 在讀取或生成文字之前，會先把所有文字切成一塊一塊的 
 <li>中文圈沒有類似的資料</li>
 <li>拋磚引玉</li>
 <li>系統性的整理自己的心得</li>
-<li><strong>讓讀者能從製作自己的 RP 中，以底層思維的方式去熟悉 LLM</strong></li>
+<li><strong>讓讀者能藉製作自己 RP 的過程，以底層思維的角度去熟悉 LLM</strong></li>
 </ul>
 </li>
 </ul>

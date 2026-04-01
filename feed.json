@@ -13,8 +13,8 @@
             "id": "https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/mu-lu.html",
             "url": "https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/mu-lu.html",
             "title": "文章目錄",
-            "summary": "前言 Google Gemini Gem 介紹 markdown語法與標點符號簡介 開始前的認知釐清",
-            "content_html": "<p><a href=\"https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/10qian-yan.html\">前言</a> </p><ul>\n<li>簡介RP、LLM、prompt</li>\n<li>如何將Prompt結構化</li>\n<li>簡述為什麼選擇Gemini進行教學</li>\n<li>延伸閱讀：<ul>\n<li><a href=\"https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/promptgong-chengprompt-engineering.html\">Prompt工程（Prompt Engineering）</a></li>\n<li><a href=\"https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/aide-huan-jueshi-yi-yu-cuo-luan.html\">AI 的幻覺、失憶與錯亂</a></li>\n</ul>\n</li>\n</ul>\n<p><a href=\"https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/google-gemini-gem-jie-shao.html\">Google Gemini Gem 介紹</a></p><ul>\n<li>事前準備</li>\n<li>Google Gemini Gem 基本使用方式</li>\n</ul>\n<p>markdown語法與標點符號簡介</p><p>開始前的認知釐清</p>",
+            "summary": "前言 簡介RP、LLM、prompt 如何將Prompt結構化 簡述為什麼選擇Gemini進行教學 延伸閱讀： Prompt工程（Prompt Engineering） AI 的幻覺、失憶與錯亂 Google&hellip;",
+            "content_html": "<ol>\n<li><a href=\"https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/10qian-yan.html\">前言</a> <ul>\n<li>簡介RP、LLM、prompt</li>\n<li>如何將Prompt結構化</li>\n<li>簡述為什麼選擇Gemini進行教學</li>\n<li>延伸閱讀：<ul>\n<li><a href=\"https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/promptgong-chengprompt-engineering.html\">Prompt工程（Prompt Engineering）</a></li>\n<li><a href=\"https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/aide-huan-jueshi-yi-yu-cuo-luan.html\">AI 的幻覺、失憶與錯亂</a></li>\n</ul>\n</li>\n</ul>\n</li>\n<li><a href=\"https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/google-gemini-gem-jie-shao.html\">Google Gemini Gem 介紹</a><ul>\n<li>Gem 使用前之準備</li>\n<li>簡介 Gem 如何新增、編輯</li>\n</ul>\n</li>\n<li>開始前的認知釐清</li>\n<li>初階 RP 製作：咖啡廳情緣<ul>\n<li>延伸閱讀：<ul>\n<li>markdown語法與標點符號簡介</li>\n<li>RP 背景設定與角色設計簡述</li>\n<li>RP 時交談的技術（初階）</li>\n<li>評估與測試</li>\n</ul>\n</li>\n</ul>\n</li>\n</ol>\n",
             "author": {
                 "name": "noS"
             },
@@ -84,14 +84,14 @@
             "url": "https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/qian-yan.html",
             "title": "關於網站",
             "summary": "關於本網 服務對象： 從零開始，想要自訂義AI玩角色扮演的人。 無程式背景的一般人友善。 定位： 個人部落格，無償分享。 用愛發電，緩慢更新。 陳諾與宣告： 優先使用免費/公開資源。 重視隱私，教學間涉及之內容會提示。&hellip;",
-            "content_html": "<h2 id=\"關於本網\">關於本網</h2>\n<ul>\n<li>服務對象：<ul>\n<li>從零開始，想要自訂義AI玩角色扮演的人。</li>\n<li>無程式背景的一般人友善。</li>\n</ul>\n</li>\n<li>定位：<ul>\n<li>個人部落格，無償分享。</li>\n<li>用愛發電，緩慢更新。</li>\n</ul>\n</li>\n<li>陳諾與宣告：<ul>\n<li>優先使用免費/公開資源。</li>\n<li>重視隱私，教學間涉及之內容會提示。</li>\n<li>言簡意賅，降低無意義情報（情境圖片等）以免浪費時間。</li>\n<li><strong>內容盡量手打</strong>。（專業內容請AI抓刀避免個人理解錯誤）</li>\n<li>不使用AI生成廢文、廢圖。</li>\n<li>以學術討論的立場寫作。</li>\n<li>版權宣告： <a href=\"https://www.gnu.org/licenses/gpl-3.0.zh-tw.html\">GNU GPLv3</a></li>\n</ul>\n</li>\n</ul>\n<h2 id=\"主要內容\">主要內容</h2>\n<p>分享以Gemini製作並進行RP的經驗與技巧。<br>\n範例以LLM免費用戶可實作的內容進行撰寫。</p><h2 id=\"關於站主\">關於站主</h2>\n<ul>\n<li>名稱：noS</li>\n<li>Tag：#男性 #動漫宅 #中年</li>\n<li>自介：<ul>\n<li>半退環境的動漫宅（新作品看不習慣）</li>\n<li>支持知識共享</li>\n</ul>\n</li>\n<li>架站原因：<ul>\n<li>中文圈沒有類似的資料</li>\n<li>拋磚引玉</li>\n<li>系統性的整理自己的心得</li>\n<li><strong>讓讀者能從製作自己的 RP 中，以底層思維的方式去熟悉 LLM</strong></li>\n</ul>\n</li>\n</ul>\n<hr>\n<p>其他內容 尚在吸收日月精華中…</p>",
+            "content_html": "<h2 id=\"關於本網\">關於本網</h2>\n<ul>\n<li>服務對象：<ul>\n<li>從零開始，想要自訂義AI玩角色扮演的人。</li>\n<li>無程式背景的一般人友善。</li>\n</ul>\n</li>\n<li>定位：<ul>\n<li>個人部落格，無償分享。</li>\n<li>用愛發電，緩慢更新。</li>\n</ul>\n</li>\n<li>陳諾與宣告：<ul>\n<li>優先使用免費/公開資源。</li>\n<li>重視隱私，教學間涉及之內容會提示。</li>\n<li>言簡意賅，降低無意義情報（情境圖片等）以免浪費時間。</li>\n<li><strong>內容盡量手打</strong>。（專業內容請AI抓刀避免個人理解錯誤）</li>\n<li>不使用AI生成廢文、廢圖。</li>\n<li>以學術討論的立場寫作。</li>\n<li>版權宣告： <a href=\"https://www.gnu.org/licenses/gpl-3.0.zh-tw.html\">GNU GPLv3</a></li>\n</ul>\n</li>\n</ul>\n<h2 id=\"主要內容\">主要內容</h2>\n<p>分享以Gemini製作並進行RP的經驗與技巧。<br>\n範例以LLM免費用戶可實作的內容進行撰寫。</p><h2 id=\"關於站主\">關於站主</h2>\n<ul>\n<li>名稱：noS</li>\n<li>Tag：#男性 #動漫宅 #中年</li>\n<li>自介：<ul>\n<li>半退環境的動漫宅（新作品看不習慣）</li>\n<li>支持知識共享</li>\n</ul>\n</li>\n<li>架站原因：<ul>\n<li>中文圈沒有類似的資料</li>\n<li>拋磚引玉</li>\n<li>系統性的整理自己的心得</li>\n<li><strong>讓讀者能藉製作自己 RP 的過程，以底層思維的角度去熟悉 LLM</strong></li>\n</ul>\n</li>\n</ul>\n<hr>\n<p>其他內容 尚在吸收日月精華中…</p>",
             "author": {
                 "name": "noS"
             },
             "tags": [
             ],
             "date_published": "2026-03-22T22:01:13+08:00",
-            "date_modified": "2026-03-31T22:07:44+08:00"
+            "date_modified": "2026-04-01T09:28:16+08:00"
         }
     ]
 }
