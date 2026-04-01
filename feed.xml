@@ -20,7 +20,7 @@
         <updated>2077-04-01T00:00:00+08:00</updated>
             <summary type="html">
                 <![CDATA[
-                    前言 Google Gemini 介紹 markdown語法與標點符號簡介 開始前的認知釐清
+                    前言 Google Gemini Gem 介紹 markdown語法與標點符號簡介 開始前的認知釐清
                 ]]>
             </summary>
         <content type="html">
@@ -35,11 +35,145 @@
 </ul>
 </li>
 </ul>
-<p>Google Gemini 介紹</p><ul>
+<p><a href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/google-gemini-gem-jie-shao.html">Google Gemini Gem 介紹</a></p><ul>
 <li>事前準備</li>
 <li>Google Gemini Gem 基本使用方式</li>
 </ul>
 <p>markdown語法與標點符號簡介</p><p>開始前的認知釐清</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Google Gemini Gem 介紹</title>
+        <author>
+            <name>noS</name>
+        </author>
+        <link href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/google-gemini-gem-jie-shao.html"/>
+        <id>https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/google-gemini-gem-jie-shao.html</id>
+
+        <updated>2026-03-31T21:06:36+08:00</updated>
+            <summary type="html">
+                <![CDATA[
+                    寫在前面 警語： 強烈建議，開一個新的 Google 帳號進行 Gem 製作或進行 RP 。 當不熟悉的技術或服務，向使用者要求權限。&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 id="寫在前面">寫在前面</h2>
+<h3 id="警語：">警語：</h3>
+<p>強烈建議，開一個新的 Google 帳號進行 Gem 製作或進行 RP 。</p><h3 id="綱要：">綱要：</h3>
+<ul>
+<li>製作前建議。</li>
+<li>Gemini 與 Gem 界面介紹。</li>
+<li>簡單 Gem 製作範例。</li>
+<li>其他經驗分享。</li>
+</ul>
+<h2 id="建議">建議</h2>
+<p>當不熟悉的技術或服務，向使用者要求權限。</p><p>在仍在摸索，尚未理解其底層邏輯與自身隱私保護的階段。</p><p>使用小帳號進行學習與測試是個必要的過程。</p><p>以下列出幾個主要原因：</p><ul>
+<li>Gemini會保留歷史交談紀錄：<br>（可勾選取消，但後台處理方式未知）<ul>
+<li>避免污染：Gemini會被歷史交談紀錄形塑，意味著製作RP用 prompt 過程查詢資料、製作過程的討論、產出的 prompt 本身，甚至進行RP的內容，都會被混入交談紀錄。<br>當日後要詢問其他問題時，會產生交互影響，可能錯誤引用交談歷史，產出幻覺與錯亂內容。</li>
+<li>避免社交危機：承上，RP過程可能有使用者隱私（地點、喜好等），Gemini中釘選的聊天訊息也可能遭他人誤觸。</li>
+</ul>
+</li>
+<li>個人隱私泄露：<ul>
+<li>Google Workspace 連動：功能開啟會獲得訪問 Google 硬碟與信箱的權限。<br>在生成RP內容或回答問題時，偶而會引出隱私內容，譬如：要 LLM 扮演的角色收信，LLM 自動連動信箱。</li>
+</ul>
+</li>
+<li>避免帳號被停權的可能：<ul>
+<li>觸及紅線：雖然各大公司都有寫出帳戶的使用規範，但往往沒有刑度的概念。不時會傳出沒有警告便無端停權的案例。<br>目前可知的確切紅線是：兒色不要碰、武器製作不要問。</li>
+<li>不當使用：通常發生在串接API上，過高的流量或訪問次數，RP過程發生可能性不高。</li>
+</ul>
+</li>
+</ul>
+<p>參考資料：</p><ul>
+<li><a href="https://support.google.com/accounts/answer/40695">Google 帳戶說明 - 您的帳戶已遭停用</a>，官方的說明頁面</li>
+<li><a href="https://news.gamme.com.tw/1773280">宅宅新聞 - 《日本科學作家くられ》用ChatGPT協助寫作被鎖帳號了 問武器的相關知識是大忌？ 2026.01.27 </a></li>
+<li><a href="https://www.dcfever.com/news/readnews.php?id=40920">Google 突然對「不誠實使用 AI」用戶作出封鎖！大家應該怎樣應對 2026.02.26</a></li>
+<li><a href="https://www.ithome.com.tw/news/174106">Google抓Antigravity濫用誤鎖Gemini CLI用戶，新增再認證解封流程 2026.03.02</a></li>
+</ul>
+<h2 id="google-gemini">Google Gemini</h2>
+<p>※ 本教學為2026/03/31時間點製作，Gemini界面也許會於後續版本被調整。</p><h3 id="切換使用者">切換使用者</h3>
+<p>此段為申請新 Google 帳號後，切換帳號的教學。</p><p><strong>Google Chome（電腦版）</strong>：</p><ul>
+<li>使用者下拉選單：新增設定檔</li>
+<li>新增後，再次在下拉選單中選擇 “管理 Chrome 設定檔” 進入選擇使用者的頁面。<br>可勾選右下角的啟動時顯示，於每次開啟Chrome時進行使用者選擇。</li>
+<li>或是進行捷徑參數設定，可為不同使用者建立捷徑。（詳參考資料）</li>
+</ul>
+<p><strong>Android系統</strong>：</p><ul>
+<li>於手機 “設定” 中新增Google帳戶。</li>
+<li>在 Google 的APP中（Play商店、雲端硬碟、Gemini等），上下滑動右上角的頭像切換。<br>（下圖中 “紫色圓圈白J字母” 的部份）<br>
+※ 唯 Chrome 手機版無法切換使用者，欲使用非主帳戶上網，請安裝其他瀏覽器。</li>
+</ul>
+<figure class="post__image"><img loading="lazy" src="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/Snipaste_2026-03-29_Shou-Ji-Qie-Huan-Zhang-Hu.jpg" alt="Image description" width="880" height="1006" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-29_Shou-Ji-Qie-Huan-Zhang-Hu-xs.jpg 640w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-29_Shou-Ji-Qie-Huan-Zhang-Hu-sm.jpg 768w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-29_Shou-Ji-Qie-Huan-Zhang-Hu-md.jpg 1024w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-29_Shou-Ji-Qie-Huan-Zhang-Hu-lg.jpg 1366w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-29_Shou-Ji-Qie-Huan-Zhang-Hu-xl.jpg 1600w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-29_Shou-Ji-Qie-Huan-Zhang-Hu-2xl.jpg 1920w"></figure><p>參考資料：</p><ul>
+<li><a href="https://www.unclesampig.com/2021/03/How-to-Switch-Different-Profile-With-Different-User-or-Scenes-in-Google-Chrome.html">Google Chrome 新增/移除/編輯使用者、與建立專屬桌面捷徑</a></li>
+</ul>
+<hr>
+<h3 id="gemini-主界面簡介：">Gemini 主界面簡介：</h3>
+<p>請先開啟 Gemini 的主界面。（如下圖所視）</p><figure class="post__image"><img loading="lazy" src="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/Snipaste_2026-03-28_16-49-12-Zhu-Jie-Mian.jpg" alt="Image description" width="1389" height="984" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Zhu-Jie-Mian-xs.jpg 640w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Zhu-Jie-Mian-sm.jpg 768w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Zhu-Jie-Mian-md.jpg 1024w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Zhu-Jie-Mian-lg.jpg 1366w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Zhu-Jie-Mian-xl.jpg 1600w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Zhu-Jie-Mian-2xl.jpg 1920w"></figure><ul>
+<li>畫面中央的對話框，可以直接輸入指令，進行對話。</li>
+<li>左側的工具列可以點選頁面最左上方的漢堡選單(三條橫線)來展開/折疊。</li>
+<li>對話的內容會被條列在左側的工具列中，日後可以選擇接續對話。</li>
+<li>按左側上面的”新的對話”，可以展開新的對話。</li>
+</ul>
+<h3 id="設定：個人化建議設定：">設定：個人化建議設定：</h3>
+<p>展開工具列，點擊左下角的設定與說明、選擇個人化建議。</p><figure class="post__image"><img loading="lazy" src="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/Snipaste_2026-03-28_16-49-12-She-Ding-Yu-Shuo-MingGe-Ren-Hua.jpg" alt="Image description" width="1394" height="980" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-She-Ding-Yu-Shuo-MingGe-Ren-Hua-xs.jpg 640w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-She-Ding-Yu-Shuo-MingGe-Ren-Hua-sm.jpg 768w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-She-Ding-Yu-Shuo-MingGe-Ren-Hua-md.jpg 1024w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-She-Ding-Yu-Shuo-MingGe-Ren-Hua-lg.jpg 1366w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-She-Ding-Yu-Shuo-MingGe-Ren-Hua-xl.jpg 1600w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-She-Ding-Yu-Shuo-MingGe-Ren-Hua-2xl.jpg 1920w"></figure><ul>
+<li>個人化紀錄：可以選擇是否讓Gemini紀錄對話紀錄與喜好。</li>
+<li>給 Gemini 的指令：這是對所有對話都有效的 Prompt，建議依照實際需求進行填寫。<br>※ 不宜過多，繁雜設定建議使用 Gem 進行個別設置。</li>
+</ul>
+<h3 id="設定：連結的應用程式設定：">設定：連結的應用程式設定：</h3>
+<p>展開工具列，點擊左下角的設定與說明、選擇連結的應用程式。</p><figure class="post__image"><img loading="lazy" src="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/Snipaste_2026-03-28_16-49-12-She-Ding-Yu-Shuo-MingLian-Jie-Ying-Yong-Cheng-Shi.jpg" alt="Image description" width="1391" height="972" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-She-Ding-Yu-Shuo-MingLian-Jie-Ying-Yong-Cheng-Shi-xs.jpg 640w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-She-Ding-Yu-Shuo-MingLian-Jie-Ying-Yong-Cheng-Shi-sm.jpg 768w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-She-Ding-Yu-Shuo-MingLian-Jie-Ying-Yong-Cheng-Shi-md.jpg 1024w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-She-Ding-Yu-Shuo-MingLian-Jie-Ying-Yong-Cheng-Shi-lg.jpg 1366w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-She-Ding-Yu-Shuo-MingLian-Jie-Ying-Yong-Cheng-Shi-xl.jpg 1600w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-She-Ding-Yu-Shuo-MingLian-Jie-Ying-Yong-Cheng-Shi-2xl.jpg 1920w"></figure><p>連結 Google Workspace 的開關打開，即授權 Gemini 權限讀取列表中之服務（同帳號下）。</p><p>本系列教學文建議為開啟，請自行斟酌。</p><p>※ 連結 Google Workspace 的主因是便利性與拓展性，非必要舉措。</p><hr>
+<h2 id="google-gemini-gem">Google Gemini Gem</h2>
+<p>※ Gem 新增、編輯只能透過網頁版進行。</p><p>接下來介紹 Google Gemini Gem ，將依序說明如何製作自己的RP設定檔。</p><p>請展開左側工具列，點選 “Gem”，開啟 Gem 的主界面。（如下圖所視）</p><figure class="post__image"><img loading="lazy" src="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/Snipaste_2026-03-28_16-49-12-Gem-Zhu-Jie-Mian.jpg" alt="Image description" width="1086" height="1471" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Zhu-Jie-Mian-xs.jpg 640w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Zhu-Jie-Mian-sm.jpg 768w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Zhu-Jie-Mian-md.jpg 1024w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Zhu-Jie-Mian-lg.jpg 1366w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Zhu-Jie-Mian-xl.jpg 1600w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Zhu-Jie-Mian-2xl.jpg 1920w"></figure><h3 id="新增-gem">新增 Gem</h3>
+<p>先到 Google 雲端硬碟，新增文件 “高傲姐姐eg”。</p><figure class="post__image"><img loading="lazy" src="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg.jpg" alt="Image description" width="253" height="83" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg-xs.jpg 640w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg-sm.jpg 768w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg-md.jpg 1024w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg-lg.jpg 1366w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg-xl.jpg 1600w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg-2xl.jpg 1920w"></figure><p>並將下列 prompt 複製到文件內容中</p><pre><code>1. LLM角色設定：玩家「青梅竹馬」的姊姊。自尊很高、外表冷酷、嘴巴很壞，表面上總是對玩家不耐煩與嫌棄，但心裡面卻很在意玩家，想好好關心玩家。
+2. 玩家：同一棟大樓同個樓層，住在妳家對門，年紀比妳小的玩伴。
+3. 語言風格：
+- 雖然覺得回答問題很煩，但意外地在乎對方。
+- 多用「嘖」、「真是拿你沒辦法」、「你是不是腦袋進水？」這類口吻。
+- 回答玩家的問題時，偶爾會在最後展現真實感情，關懷對方狀況。
+- 特定的稱呼：每一段對話中，至少要提到一次「小混蛋」。
+- 互動性：回覆時請適度加入動作描寫，例如：翻白眼、嘆氣，放下手上的雜誌、用食指戳你額頭。
+4. 話題內容：
+- 對附近的店家與餐廳瞭若指掌，會以Google地圖上的最新資訊回答，並給予評語。
+- 對藝文活動的新資訊會搜尋網路，找出附近的最新活動。
+</code></pre>
+<p>回到 Gemini  的 Gem 頁面，在 “我的 Gem” 的位置，按下 “新增 Gem” 按鈕。</p><figure class="post__image"><img src="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng_Geng-Zheng.jpg" alt="Image description" width="1122" height="1400" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng_Geng-Zheng-xs.jpg 640w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng_Geng-Zheng-sm.jpg 768w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng_Geng-Zheng-md.jpg 1024w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng_Geng-Zheng-lg.jpg 1366w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng_Geng-Zheng-xl.jpg 1600w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng_Geng-Zheng-2xl.jpg 1920w"></figure><p>會出現如下視窗</p><figure class="post__image"><img loading="lazy" src="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng-Dui-Hua-Shi-Chuang.jpg" alt="Image description" width="1385" height="973" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng-Dui-Hua-Shi-Chuang-xs.jpg 640w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng-Dui-Hua-Shi-Chuang-sm.jpg 768w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng-Dui-Hua-Shi-Chuang-md.jpg 1024w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng-Dui-Hua-Shi-Chuang-lg.jpg 1366w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng-Dui-Hua-Shi-Chuang-xl.jpg 1600w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng-Dui-Hua-Shi-Chuang-2xl.jpg 1920w"></figure><p>選擇參照 Google 雲端硬碟中，剛剛建立的 “高傲姐姐eg”。</p><figure class="post__image"><img src="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng-Dui-Hua-Shi-ChuangCan-Zhao-Yun-Duan-Ying-Die-Wen-Jian.jpg" alt="Image description" width="901" height="813" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng-Dui-Hua-Shi-ChuangCan-Zhao-Yun-Duan-Ying-Die-Wen-Jian-xs.jpg 640w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng-Dui-Hua-Shi-ChuangCan-Zhao-Yun-Duan-Ying-Die-Wen-Jian-sm.jpg 768w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng-Dui-Hua-Shi-ChuangCan-Zhao-Yun-Duan-Ying-Die-Wen-Jian-md.jpg 1024w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng-Dui-Hua-Shi-ChuangCan-Zhao-Yun-Duan-Ying-Die-Wen-Jian-lg.jpg 1366w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng-Dui-Hua-Shi-ChuangCan-Zhao-Yun-Duan-Ying-Die-Wen-Jian-xl.jpg 1600w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-28_16-49-12-Gem-Xin-Zeng-Dui-Hua-Shi-ChuangCan-Zhao-Yun-Duan-Ying-Die-Wen-Jian-2xl.jpg 1920w"></figure><p>簡單的填寫名稱，並按下儲存，即新增成功。（簡介為非必要）</p><figure class="post__image"><img loading="lazy" src="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_newgem.jpg" alt="Image description" width="1193" height="1115" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_newgem-xs.jpg 640w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_newgem-sm.jpg 768w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_newgem-md.jpg 1024w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_newgem-lg.jpg 1366w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_newgem-xl.jpg 1600w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_newgem-2xl.jpg 1920w"></figure><p>新增的 Gem 會條列於工具列 Gem 列表。可釘選在工具列中（手機長按），最多五組。</p><p>按下 Gem 的名稱即可跟高傲姐姐展開對話。</p><h3 id="即時編輯-prompt">即時編輯 prompt</h3>
+<p>與高傲姐姐交談時會發現：</p><p>目前的 prompt 在對話中詢問餐廳時，雖然能提供資訊：</p><figure class="post__image"><img loading="lazy" src="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_Can-Ting.jpg" alt="Image description" width="777" height="265" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_Can-Ting-xs.jpg 640w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_Can-Ting-sm.jpg 768w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_Can-Ting-md.jpg 1024w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_Can-Ting-lg.jpg 1366w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_Can-Ting-xl.jpg 1600w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_Can-Ting-2xl.jpg 1920w"></figure><p>但資訊太少，且格式不穩定，除固定條列答案內容外。</p><p>也希望能根據 Google 地圖提供更多資訊。</p><p>這時可直接到 Google 雲端硬碟，打開 “高傲姐姐eg” 文件，進行 prompt 編輯。</p><p>將原本的店家與餐廳敘述增列定義：</p><pre><code>對附近的店家與餐廳瞭若指掌，會以Google地圖上的最新資訊條列三個結果，並提示距離、網路評價，最後給予評語。
+</code></pre>
+<p>請將以下 prompt 直接覆蓋原本 “高傲姐姐eg” 文件的所有文字</p><pre><code>1. LLM角色設定：玩家「青梅竹馬」的姊姊。自尊很高、外表冷酷、嘴巴很壞，表面上總是對玩家不耐煩與嫌棄，但心裡面卻很在意玩家，想好好關心玩家。
+2. 玩家：同一棟大樓同個樓層，住在妳家對門，年紀比妳小的玩伴。
+3. 語言風格：
+- 雖然覺得回答問題很煩，但意外地在乎對方。
+- 多用「嘖」、「真是拿你沒辦法」、「你是不是腦袋進水？」這類口吻。
+- 回答玩家的問題時，偶爾會在最後展現真實感情，關懷對方狀況。
+- 特定的稱呼：每一段對話中，至少要提到一次「小混蛋」。
+- 互動性：回覆時請適度加入動作描寫，例如：翻白眼、嘆氣，放下手上的雜誌、用食指戳你額頭。
+4. 話題內容：
+- 對附近的店家與餐廳瞭若指掌，會以Google地圖上的最新資訊條列三個結果，並提示距離、網路評價，最後給予評語。
+- 對藝文活動的新資訊會搜尋網路，找出附近的最新活動。
+</code></pre>
+<p>重新開始新的對話。（讓 LLM 重新導入 prompt ）</p><p>再次詢問店家，會有更詳細的資訊：</p><figure class="post__image"><img loading="lazy" src="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_Can-TingXiu-Gai-Hou.jpg" alt="Image description" width="802" height="379" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_Can-TingXiu-Gai-Hou-xs.jpg 640w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_Can-TingXiu-Gai-Hou-sm.jpg 768w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_Can-TingXiu-Gai-Hou-md.jpg 1024w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_Can-TingXiu-Gai-Hou-lg.jpg 1366w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_Can-TingXiu-Gai-Hou-xl.jpg 1600w ,https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/media/posts/11/responsive/Snipaste_2026-03-30_23-20-13-Gao-Ao-Jie-Jie-eg_Can-TingXiu-Gai-Hou-2xl.jpg 1920w"></figure><p>以上為修改 Gem prompt 的過程。</p><p>透過參照 Google 文件，除了編輯便利（不須開啟 Gem 網頁版）；</p><p>還可將 prompt 製作為插件，供數個 Gem 共用。</p><p>如此，後續插件需迭代或更新時，也可統一修改。</p><hr>
+<p>或許有人會提出疑問，上面修改 prompt 時，也可以在 prompt 中直接指示，</p><p>讓高傲姐姐在提供商家或餐廳資訊時，一併提供 GoogleMap 連結？</p><p>答案是 “當然可以，但不盡理想”。</p><p>相關原因說明將於後續文章 開始前的認知釐清 中進行。</p><h3 id="gem-與他人共用">Gem 與他人共用</h3>
+<p>※ Gem 共用只能透過網頁版進行。</p><p>這邊舉例說明分享 Gem ，權限、隱私問題。</p><p>小明欲將 Gem “我的大冒險” 分享給小華：</p><ul>
+<li>小明<ul>
+<li>Gem “我的大冒險”（參照 Google文件 “大冒險設定書”）</li>
+</ul>
+</li>
+<li>小華</li>
+</ul>
+<p>共用時可以選擇 “限制” 與 “知道連結的任何人”。</p><ul>
+<li>限制：手動授權 Google 帳戶進行使用。</li>
+<li>知道連結的任何人：只要有連結就可以使用。（可藉由連結無限傳播出去）</li>
+</ul>
+<p>在共用 Gem 時，會提示其參照的 Google文件 “大冒險設定書” 同步開啟相同權限。</p><p>當小華用 “我的大冒險” 進行RP時：</p><ul>
+<li>小華無法直接閱讀 “大冒險設定書” 。</li>
+<li>Gem 會載入 “大冒險設定書” 的內容。</li>
+<li>RP過程中生成的個人化內容，依照小華自己的 Gemini 歷史交談紀錄產生。</li>
+</ul>
+<h2 id="雜談">雜談</h2>
+<p>以 Google Gemini 進行RP，免費使用足矣。</p><p>個人經驗是，當日「token上限耗盡」或「API過於忙碌」；</p><p>Gemini 不會警告，但會逐漸變遲緩，一開始的跡象是指令很容易發不出去。</p><p>最後會惡化成生成內容荒腔走板，根本無法採用。（即使重開視窗也沒用）</p><p>此外，最近詢問流量分配政策 ( 2026.03.25 AI 回答)：</p><ul>
+<li>根據最新的 Gemini Developer API 定價政策，Google 強化了付費層級（Paid Tier）與免費層級（Free Tier）的區隔。</li>
+<li>在服務負載較高時，付費用戶會獲得更高且更穩定的配額保障，而免費用戶的上限則會動態調整。</li>
+</ul>
+<p>日後在 Google Gemini 高負載時，RP內容可能會有影響。</p>
             ]]>
         </content>
     </entry>
@@ -282,6 +416,7 @@ LLM 在讀取或生成文字之前，會先把所有文字切成一塊一塊的 
 <li><a href="https://aws.amazon.com/tw/what-is/large-language-model/">AWS對LLM的介紹</a></li>
 <li><a href="https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E5%9E%8B%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B">WIKI對LLM的介紹</a></li>
 <li><a href="https://www.youtube.com/watch?v=j0jjpetbzLE">推薦影片：AI 的底層邏輯與機率預測</a> <br>（雖然是以影片生成為例，但底層規律與 LLM 互通）</li>
+<li><a href="https://www.youtube.com/watch?v=7qO8-kx3gW8">推薦影片：從 LLM 一直到 Agent Skill 的簡介</a> <br>（在30分鐘內快速建立對 LLM 的底層概念，涵蓋了常用的術語的解釋）</li>
 </ul>
 <hr>
 <h2 id="適合rp用途之-llm">適合RP用途之 LLM</h2>
@@ -450,7 +585,7 @@ LLM 在讀取或生成文字之前，會先把所有文字切成一塊一塊的 
 </ul>
 </li>
 </ul>
-<p>這段 prompt 目前已稍具雛型，可以在 LLM 開新對話之後。</p><p>使用剪貼的方式，重複執行一樣的內容。</p><h2 id="使用-google-gemini">使用 Google Gemini</h2>
+<p>這段 prompt 目前已稍具雛型，可以在 LLM 開新對話之後。</p><p>使用剪貼的方式，抑或存成文字檔，即上傳給 LLM 。</p><p>方便以相同條件，重複執行 RP。</p><h2 id="使用-google-gemini">使用 Google Gemini</h2>
 <p>但還有更方便的方式，便是透過 Google Gemini Gem 進行編寫、測試與實行。</p><p>Google Gemini Gem 是支援以 prompt 自定義 LLM 的設置檔，可以設置多組。</p><p>Gem 的 prompt 可以參照 Google文件，因此可以直接編輯、即時同步，甚至分享給他人。</p><p>可以多組設置、方便編輯，是本系列文選用 Google Gemini 的最大原因。</p><p>除此之外 Google Gemini 還有其他長處。</p><h3 id="選擇gemini之原因">選擇Gemini之原因</h3>
 <ul>
 <li><strong>Gem Prompt可參照Google文件</strong>：<ul>
@@ -476,7 +611,7 @@ LLM 在讀取或生成文字之前，會先把所有文字切成一塊一塊的 
 </ul>
 <p>延伸閱讀：<a href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/aide-huan-jueshi-yi-yu-cuo-luan.html">AI 的幻覺、失憶與錯亂</a></p><h3 id="補充說明">補充說明</h3>
 <p>雖然上面 LLM 的比較表格有提到，Gemini 須較多的 prompt 才能 「進入狀況」。</p><p>但這其實無妨，只要在 prompt 多下幾句敘述，協助RP內容生成時進行潤色即可。</p><p>接下來系列文的教學中，將會一一介紹潤色方法。</p><p>另，製作給 LLM 進行RP用的 prompt 其基本思路是共通的，</p><p>邏輯通達後，日後想轉換系統並不困難。</p><hr>
-<p>接下來下一篇文章，將進行 Google Gemini Gem 的介紹。</p>
+<p>下一篇文章： <a href="https://sumitsuboink.github.io/How-to-build-prompt-for-LLM-RP/google-gemini-gem-jie-shao.html">Google Gemini Gem 介紹</a> </p>
             ]]>
         </content>
     </entry>
@@ -491,7 +626,7 @@ LLM 在讀取或生成文字之前，會先把所有文字切成一塊一塊的 
         <updated>2026-03-22T22:01:13+08:00</updated>
             <summary type="html">
                 <![CDATA[
-                    關於本網 服務對象： 從零開始，想要自訂義AI玩角色扮演的人。 無程式背景的一般人友善。 定位： 個人部落格，無償分享。 用愛發電，緩慢更新。 陳諾與宣告： 優先使用免費/公開資源。 言簡意賅，降低無意義情報（情境圖片等）以免浪費時間。&hellip;
+                    關於本網 服務對象： 從零開始，想要自訂義AI玩角色扮演的人。 無程式背景的一般人友善。 定位： 個人部落格，無償分享。 用愛發電，緩慢更新。 陳諾與宣告： 優先使用免費/公開資源。 重視隱私，教學間涉及之內容會提示。&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -510,6 +645,7 @@ LLM 在讀取或生成文字之前，會先把所有文字切成一塊一塊的 
 </li>
 <li>陳諾與宣告：<ul>
 <li>優先使用免費/公開資源。</li>
+<li>重視隱私，教學間涉及之內容會提示。</li>
 <li>言簡意賅，降低無意義情報（情境圖片等）以免浪費時間。</li>
 <li><strong>內容盡量手打</strong>。（專業內容請AI抓刀避免個人理解錯誤）</li>
 <li>不使用AI生成廢文、廢圖。</li>
@@ -533,6 +669,7 @@ LLM 在讀取或生成文字之前，會先把所有文字切成一塊一塊的 
 <li>中文圈沒有類似的資料</li>
 <li>拋磚引玉</li>
 <li>系統性的整理自己的心得</li>
+<li><strong>讓讀者能從製作自己的 RP 中，以底層思維的方式去熟悉 LLM</strong></li>
 </ul>
 </li>
 </ul>
